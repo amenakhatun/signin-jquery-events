@@ -3,17 +3,27 @@ $(function() {
 
   $('button.signin').click(function(){
     $('div.modal').fadeIn();
-    });
+  });
 
   $('button.close').click(function(){
     $('div.modal').fadeOut();
   });
 
-  $('.submit').on('click', function(){
+  $('.submit').on('click', function() {
     $("[name = 'user']").addClass('error');
     $("[name = 'pass']").addClass('error');
   });
 
+
+  $("[name = 'user']").on('click', function() {
+    $("[name = 'user']").removeClass('error')
+  });
+
+  $("[name = 'pass']").on('click', function() {
+    $("[name = 'pass']").removeClass('error')
+  });
+  //
+  //
 
     //
 
